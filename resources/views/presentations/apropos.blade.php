@@ -10,7 +10,7 @@
     <p>Cette appliation à été consue par Laite&hearts;Yagami</p>
     <p><a href="/">Retour sur la page d'acceuil</a></p>
     <footer>
-        <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="/apropos">Apropos</a></p>
+        <p>&copy; Copyright {{date('Y')}}. Tous droits reservés.</p>
     </footer>
 </body>
 </html>
