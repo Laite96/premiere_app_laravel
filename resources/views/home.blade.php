@@ -10,7 +10,7 @@
         <h1>Salut! Je suis Laite Yagami je viens de la Guinée</h1>
         <p>Il est {{date('H:i A')}} à Conakry</p>
         <footer>
-            <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="#">Apropos</a></p>
+            <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="/apropos">Apropos</a></p>
         </footer>
     </body>
 </html>
