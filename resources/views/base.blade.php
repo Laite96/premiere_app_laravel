@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Learing')</title>
+    <title>@yield('title', env('APP_NAME'))</title>
 </head>
 <body>
     @yield('content')
