@@ -11,7 +11,7 @@
 
 
 <footer>
-    <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="/apropos">Apropos</a></p>
+    <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="{{route('apropos')}}">Apropos</a></p>
 </footer>
 </body>
 </html>
