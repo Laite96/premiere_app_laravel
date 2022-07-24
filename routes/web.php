@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('', function () {
+Route::name('home')->get('', function () {
     return view('presentations.home');
-})->name('home');
+});
 
 Route::get('apropos', function ()
 {
