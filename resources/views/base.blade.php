@@ -9,6 +9,7 @@
 <body>
     @yield('content')
 
+
 <footer>
     <p>&copy; Copyright {{date('Y')}}. Tous droits reservés. <a href="/apropos">Apropos</a></p>
 </footer>
