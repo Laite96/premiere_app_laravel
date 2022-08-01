@@ -6,7 +6,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>@yield('title',config('app.name'))</title>
+    <title>{{ isset($title) ? $title . ' | '. config('app.name') : config('app.name')}}</title>
 </head>
 <body class="py-6 flex flex-col justify-between items-center min-h-screen">
     <main role="main" class="flex flex-col justify-center items-center">

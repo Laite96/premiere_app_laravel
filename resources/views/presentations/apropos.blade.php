@@ -1,5 +1,4 @@
-@extends('base')
-@section('title', 'Apropos|'. config('app.name'))
+@extends('base', ['title' => 'Apropos'])
 @section('content')
     <img src="{{asset('img/ly.jpg')}}" alt="PDG" class="w-16 md:w-32 lg:w-48 rounded shadow-md h-40 my-12">
     <h2 class="text-gray-700 mb-5 font-semibold">
