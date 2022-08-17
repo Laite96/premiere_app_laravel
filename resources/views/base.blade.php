@@ -13,7 +13,6 @@
         @yield('content')
     </main>
 
-
     <footer>
     <p class="text-gray-400">&copy; Copyright {{date('Y')}}. Tous droits reservés.
         @if(!Route::is('apropos'))
