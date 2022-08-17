@@ -5,4 +5,6 @@
         Cette appliation à été consue par Laite <span class="text-pink-500">&hearts;</span> Yagami
     </h2>
     <p><a href="{{route('home')}}" class="text-indigo-600 hover:text-indigo-800 underline">Retour sur la page d'acceuil</a></p>
+    
+    <p><a href="{{route('article')}}" class="mb-5 text-indigo-600 hover:text-indigo-800 underline">Mes articles</a></p>
 @endsection

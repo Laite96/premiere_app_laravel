@@ -13,6 +13,8 @@ Route::name('home')->get('', function () {
 
 Route::name('home')->get('', [MainController::class, 'home']);
 
+Route::get('article', [MainController::class, 'article'])->name('article');
+
 Route::view('apropos', 'presentations.apropos')->name('apropos');
 
 /*
