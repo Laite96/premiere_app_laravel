@@ -2,13 +2,16 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\=PostArticle>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\posts>
  */
 class PostFactory extends Factory
 {
+    protected $model=Post::class;
+
     /**
      * Define the model's default state.
      *
@@ -18,6 +21,9 @@ class PostFactory extends Factory
     {
         return [
             //
+            'title'=>$this->faker->sentence,
+            'content'=>$this->faker->paragraph,
+            'created_at'=>now()
         ];
     }
 }
