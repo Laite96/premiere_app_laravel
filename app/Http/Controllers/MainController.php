@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 class MainController extends Controller
 {
     public function home()
@@ -11,7 +13,10 @@ class MainController extends Controller
 
     public function article()
     {
-        return view('presentations.article');
+        $posts = Post::all();
+        return view('presentations.article',[
+            'post'=>$posts
+        ]);
     }
     public function apropos()
     {
