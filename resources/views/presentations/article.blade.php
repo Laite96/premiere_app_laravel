@@ -6,5 +6,6 @@
         <h3>{{ $posts->title }}</h3>
     @endforeach
 
+    <p><a href="{{route('create_post')}}" class="text-indigo-600 hover:text-indigo-800 underline">Creer un post</a></p>
     <p><a href="{{route('home')}}" class="text-indigo-600 hover:text-indigo-800 underline">Retour sur la page d'acceuil</a></p>
 @endsection

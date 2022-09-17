@@ -17,6 +17,9 @@ Route::get('article', [MainController::class, 'article'])->name('article');
 
 Route::get('apropos', [MainController::class, 'apropos'])->name('apropos');
 
+Route::get('create_post', [MainController::class, 'create_post'])->name('create_post');
+Route::post('create_post', [MainController::class, 'store'])->name('store');
+
 //Route::view('apropos', 'presentations.apropos')->name('apropos');
 
 /*
