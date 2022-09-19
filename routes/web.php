@@ -15,6 +15,8 @@ Route::name('home')->get('', [MainController::class, 'home']);
 
 Route::get('article', [MainController::class, 'article'])->name('article');
 
+Route::get('post/{id}', [MainController::class, 'show'])->name('show');
+
 Route::get('apropos', [MainController::class, 'apropos'])->name('apropos');
 
 Route::get('create_post', [MainController::class, 'create_post'])->name('create_post');

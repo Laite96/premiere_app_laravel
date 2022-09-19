@@ -31,7 +31,17 @@ class MainController extends Controller
         dd("Supprimé");*/
 
         return view('presentations.article', [
-            'post' => $posts,
+            'post' => $posts
+        ]);
+    }
+
+    public function show($id)
+    {
+        $post = Post::findOrFail($id);
+
+
+        return view('presentations.show', [
+            'post' =>$post
         ]);
     }
     public function apropos()
