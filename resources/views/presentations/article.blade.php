@@ -10,6 +10,21 @@
         <span>Aucun post publié</span>
     @endif
 
+    <h1>Liste des videos</h1>
+
+    @foreach ($vide as $videos )
+
+        <div>{{ $videos->url }} || Ajoutée le {{ $videos->created_at->format('d/m/y') }}</div>
+
+    @endforeach
+
+    @forelse ($video->comments as $comment)
+        <div>{{ $comment->content_comment }} || Crée le {{ $comment->created_at->format('d/m/y') }}</div>
+
+    @empty
+        <div>Aucun commentaire pour cette video</div>
+    @endforelse
+
     <p><a href="{{route('create_post')}}" class="text-indigo-600 hover:text-indigo-800 underline">Creer un post</a></p>
     <p><a href="{{route('home')}}" class="text-indigo-600 hover:text-indigo-800 underline">Retour sur la page d'acceuil</a></p>
 @endsection

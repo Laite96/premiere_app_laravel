@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comments;
 use App\Models\Post;
+use App\Models\Videos;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -15,6 +17,9 @@ class MainController extends Controller
     public function article()
     {
         $posts = Post::all();
+        $videos = Videos::find(1);
+
+        $vid = Videos::all();
 
         //Pour le update
         /*$posts = Post::find(1);
@@ -32,6 +37,8 @@ class MainController extends Controller
 
         return view('presentations.article', [
             'post' => $posts,
+            'video' => $videos,
+            'vide' => $vid,
         ]);
     }
 
@@ -69,5 +76,21 @@ class MainController extends Controller
         ]);
 
         dd("post creer");
+    }
+
+    public function register_plymorphic()
+    {
+        $post = Post::find(11);
+        $video = Videos::find(1);
+
+        $comment1 = new Comments(['content_comment' => 'mon premier commentaire']);
+        $comment2 = new Comments(['content_comment' => 'mon deuxieme commentaire']);
+        $comment3 = new Comments(['content_comment' => 'mon troisiseme commentaire']);
+
+        $post->comments()->saveMany([
+            $comment1, $comment2,
+        ]);
+
+        $video->comments()->save($comment3);
     }
 }

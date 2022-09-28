@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('commentaires', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('libelle_cooment');
-            //La premiere façon
-            /*$table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts');*/
-
-            //La deuxieme façon de le faire
-            $table->foreignId('post_id')->constrained();
+            $table->string('title')->nullable();
+            $table->mediumText('url')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commentaires');
+        Schema::dropIfExists('videos');
     }
 };

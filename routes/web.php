@@ -15,11 +15,14 @@ Route::name('home')->get('', [MainController::class, 'home']);
 
 Route::get('article', [MainController::class, 'article'])->name('article');
 
+Route::get('create_register_polymorphic', [MainController::class, 'register_plymorphic']);
+
 Route::get('post/{id}', [MainController::class, 'show'])->name('show');
 
 Route::get('apropos', [MainController::class, 'apropos'])->name('apropos');
 
 Route::get('create_post', [MainController::class, 'create_post'])->name('create_post');
+
 Route::post('create_post', [MainController::class, 'store'])->name('store');
 
 //Route::view('apropos', 'presentations.apropos')->name('apropos');

@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\Post;
+use App\Models\Comments;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Commentaires extends Model
+class Videos extends Model
 {
     use HasFactory;
-
-    public function post()
+    public function comments()
     {
-        return $this->belongsTo(Post::class);
+        return $this->morphMany(Comments::class, 'commentable');
     }
 }
