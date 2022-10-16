@@ -12,4 +12,10 @@
         <div>Aucun commentaire pour ce post</div>
     @endforelse
 
+    @forelse ($post->tags as $tag )
+        <div>{{ $tag->name_tag }}</div>
+    @empty
+        <div>Aucun tag pour ce post</div>
+    @endforelse
+
 @endsection

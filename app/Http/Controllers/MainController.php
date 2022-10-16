@@ -80,7 +80,7 @@ class MainController extends Controller
 
     public function register_plymorphic()
     {
-        $post = Post::find(11);
+        $post = Post::find(2);
         $video = Videos::find(1);
 
         $comment1 = new Comments(['content_comment' => 'mon premier commentaire']);
@@ -92,5 +92,6 @@ class MainController extends Controller
         ]);
 
         $video->comments()->save($comment3);
+
     }
 }
