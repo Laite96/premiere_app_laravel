@@ -18,4 +18,5 @@
         <div>Aucun tag pour ce post</div>
     @endforelse
 
+    <div>L'artiste sur l'images: {{ $post->imageArtist ? $post->imageArtist->name_artiste : "Pas d'artiste pour cette image" }}</div>
 @endsection

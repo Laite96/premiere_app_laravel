@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Artist;
 use App\Models\Comments;
 use App\Models\Images;
 use App\Models\Tag;
@@ -25,6 +26,11 @@ class Post extends Model
     public function image()
     {
         return $this->hasOne(Images::class);
+    }
+
+    public function imageArtist()
+    {
+        return $this->hasOneThrough(Artist::class, Images::class);
     }
 
     public function tags()
