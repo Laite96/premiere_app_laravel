@@ -70,6 +70,11 @@ class MainController extends Controller
 
         //La technique professionnel et surtout ne pas oublier de proteger les fillables les champs àremplir
 
+        $request->validate([
+            'title' => ['required', 'max:255', 'min:5', 'unique:posts'],
+            'content' => ['required']
+        ]);
+
         Post::create([
             'title' => $request->title,
             'content' => $request->content,

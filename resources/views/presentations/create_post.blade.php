@@ -1,5 +1,11 @@
 @extends('base', ['title' => 'Creation_post'])
 
+/*@if($errors->any())
+    @foreach ($erros->all() as $error)
+        <div><p class="text-red-500">{{ $error }}</p></div>
+    @endforeach
+@endif*/
+
 @section('content')
     <h1 class="text-gray-700 mb-5 font-semibold">Bienvenu sur ma page de creation des post</h1>
     <form action="{{ route('store') }}" method="post">
